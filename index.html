@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mondo</title>
+    <title>Mondo on Sui</title>
     <link rel="icon" type="image/x-icon" href="images/head.png">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/aos.css">
@@ -41,7 +41,7 @@
                 <h1>MONDO</h1>
                 <div class="socials">
 
-                    <a href="https://t.me/MondoToken_Portal" target="_blank">
+                    <a href="https://t.me/MondoSui_Portal" target="_blank">
                         <div class="social">
                             <img src="images/telegram.png" alt>
                         </div>
@@ -95,7 +95,7 @@
                             <p>1</p>
                         </div>
                         <p class="how">
-                            Create a wallet with Phantom
+                            Create a wallet with Sui Wallet
                         </p>
                     </div>
                     <div class="step">
@@ -103,7 +103,7 @@
                             <p>2</p>
                         </div>
                         <p class="how">
-                            Get some $SOL
+                            Get some $SUI
                         </p>
                     </div>
                     <div class="step">
@@ -111,7 +111,7 @@
                             <p>3</p>
                         </div>
                         <p class="how">
-                            Swap $SOL for $MONDO
+                            Swap $SUI for $MONDO
                         </p>
                     </div>
                     <div class="step">
@@ -137,14 +137,14 @@
 
                 <div class="meme">
                     <img src="images/m1.jpeg" alt>
-                    <button onclick="saveImage('m1.jpeg')">
+                    <button onclick="saveImage('./m1.jpeg')">
                         SAVE MEME
                         <img src="images/save.png" alt>
                     </button>
                 </div>
                 <div class="meme">
                     <img src="images/m2.jpeg" alt>
-                    <button onclick="saveImage('m2.jpeg')">
+                    <button onclick="saveImage('./m2.jpeg')">
 
                         SAVE MEME
                         <img src="images/save.png" alt>
@@ -152,14 +152,14 @@
                 </div>
                 <div class="meme">
                     <img src="images/m3.jpeg" alt>
-                    <button onclick="saveImage('m3.jpeg')">
+                    <button onclick="saveImage('./m3.jpeg')">
                         SAVE MEME
                         <img src="images/save.png" alt>
                     </button>
                 </div>
                 <div class="meme">
                     <img src="images/m4.jpeg" alt>
-                    <button onclick="saveImage('m4.jpeg')">
+                    <button onclick="saveImage('./m4.jpeg')">
                         SAVE MEME
                         <img src="images/save.png" alt>
                     </button>
@@ -168,28 +168,28 @@
 
                 <div class="meme">
                     <img src="images/m5.jpeg" alt>
-                    <button onclick="saveImage('m5.jpeg')">
+                    <button onclick="saveImage('./m5.jpeg')">
                         SAVE MEME
                         <img src="images/save.png" alt>
                     </button>
                 </div>
                 <div class="meme">
                     <img src="images/m6.jpeg" alt>
-                    <button onclick="saveImage('m6.jpeg')">
+                    <button onclick="saveImage('./m6.jpeg')">
                         SAVE MEME
                         <img src="images/save.png" alt>
                     </button>
                 </div>
                 <div class="meme">
                     <img src="images/m7.jpeg" alt>
-                    <button onclick="saveImage('m7.jpeg')">
+                    <button onclick="saveImage('./m7.jpeg')">
                         SAVE MEME
                         <img src="images/save.png" alt>
                     </button>
                 </div>
                 <div class="meme">
                     <img src="images/m8.jpeg" alt>
-                    <button onclick="saveImage('m8.jpeg')">
+                    <button onclick="saveImage('./m8.jpeg')">
                         SAVE MEME
                         <img src="images/save.png" alt>
                     </button>
@@ -224,13 +224,13 @@
         });
 
 
-        function saveImage(file) {
-            const imageUrl = file;  // Replace this with your image URL or base64 data
-
+        function saveImage(filePath) {
             const a = document.createElement('a');
-            a.href = imageUrl;
-            a.download = 'mondo.png';
+            a.href = filePath;
+            a.download = filePath.split('/').pop();
+            document.body.appendChild(a);
             a.click();
+            document.body.removeChild(a);
         }
 
     </script>
